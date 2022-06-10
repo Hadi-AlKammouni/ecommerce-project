@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JWTController;
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\TestController;
 
 Route::group(['prefix' => 'v1'], function(){
@@ -17,6 +18,13 @@ Route::group(['prefix' => 'v1'], function(){
         // });
     });
 
+    Route::group(['prefix' => 'user'], function(){
+        // Route::group(['middleware' => 'role.user'], function(){
+            // Route::get('/hi', [UserController::class, 'hi']);
+            Route::get('/all_items/{id?}', [UserController::class, 'getAllItems']);
+            // Route::get('/not_found', [TestController::class, 'notFound'])->name("not-found");
+        // });
+    });
     
 });
 
