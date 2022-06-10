@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use App\Models\Item;
+use App\Models\Category;
 
 class AdminController extends Controller
 {
@@ -27,5 +28,19 @@ class AdminController extends Controller
             "status" => "Success"
         ], 200);
 
-    }  
+    }
+    
+    // Function to add a category to the db
+    public function addCategory(Request $request){
+        // echo "add";
+        $category = new Category;
+        $category->category_name = $request->category_name;
+
+        $category->save();
+        
+        return response()->json([
+            "status" => "Success"
+        ], 200);
+
+    } 
 }
