@@ -4,6 +4,25 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JWTController;
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\TestController;
+
+Route::group(['prefix' => 'v1'], function(){
+
+    Route::group(['prefix' => 'admin'], function(){
+        // Route::group(['middleware' => 'role.admin'], function(){
+            // Route::get('/hi', [AdminController::class, 'hi']);
+            Route::post('/add_item', [AdminController::class, 'addItem']);
+            // Route::get('/not_found', [TestController::class, 'notFound'])->name("not-found");
+        // });
+    });
+
+    
+});
+
+
+
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
