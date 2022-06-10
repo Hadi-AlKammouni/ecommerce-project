@@ -35,4 +35,18 @@ class UserController extends Controller
             "results" => $items
         ], 200);
     }
+
+    // Function to get items by name
+    public function getItemByName($name){
+        $items = Item::where('item_name','=',$name)->get();
+        // if (!$items){
+        //     return response()->json([
+        //         "status" => "No items found with the category entered"
+        //     ], 200);
+        // }
+        return response()->json([
+            "status" => "Success",
+            "results" => $items
+        ], 200);
+    }
 }
