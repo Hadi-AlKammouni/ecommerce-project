@@ -11,11 +11,10 @@ use App\Http\Controllers\TestController;
 Route::group(['prefix' => 'v1'], function(){
 
     Route::group(['prefix' => 'admin'], function(){
-        // Route::group(['middleware' => 'role.admin'], function(){
+        Route::group(['middleware' => 'role.admin'], function(){
             // Route::get('/hi', [AdminController::class, 'hi']);
             Route::post('/add_item', [AdminController::class, 'addItem']);
-            // Route::get('/not_found', [TestController::class, 'notFound'])->name("not-found");
-        // });
+        });
     });
 
     Route::group(['prefix' => 'user'], function(){
@@ -25,10 +24,11 @@ Route::group(['prefix' => 'v1'], function(){
             Route::get('/category_search/{category}', [UserController::class, 'getItemByCategory']);
             Route::get('/name_search/{name}', [UserController::class, 'getItemByName']);
             // FAVOURITE!! Route::get('/search/{category}', [UserController::class, 'getItemByCategory']);
-            // Route::get('/not_found', [TestController::class, 'notFound'])->name("not-found");
         // });
     });
     
+    // Function called when not an admin tried to reach the add_item page
+    Route::get('/not_found', [TestController::class, 'notFound'])->name("not-found");
 });
 
 
