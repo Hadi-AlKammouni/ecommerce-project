@@ -38,10 +38,11 @@ class JWTController extends Controller
         }
 
         $user = User::create([
-                'name' => $request->name,
-                'email' => $request->email,
-                'password' => Hash::make($request->password)
-            ]);
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'user_type' => 0
+        ]);
 
         return response()->json([
             'message' => 'User successfully registered',
