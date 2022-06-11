@@ -76,8 +76,7 @@ function register(){
             })
             .catch(function (e) {
               console.log(e);
-              }
-            )
+            })
 
             // Emptying the fields after the request is done 
             for (let i=0; i<inputs.length; i++){

@@ -37,6 +37,40 @@ function logIn(){
             password.style.borderBlockColor="red";
             // dialog.showMessageBox("password must be minimum six characters");
         }
+
+        // If all condition are correct
+        if (email_condition == true && password_condition == true){
+
+            // Sending post request
+            let data = new FormData();
+            data.append('email', email.value);
+            data.append('password', password.value);
+
+            axios.post("http://127.0.0.1:8000/api/login", data)
+            .then(function (response) {
+                let response1 = response.data;
+                if(response1.access_token){
+                    // console.log(response1.access_token);
+                    let token = response1.access_token;
+                    localStorage.setItem('access_token', token);
+                }
+            })
+            // .then(function (response) {
+            //     if(response.data.error == "Unauthorized"){
+            //         alert("Wrong email and/or password")
+            //     }
+            // })
+            .catch(function (e) {
+                console.log(e);
+            })
+            
+            // Emptying the fields after the request is done 
+            for (let i=0; i<inputs.length; i++){
+                inputs[i].value="";
+            }
+            // After implementing the if condition, alert("Item has been added successfully");
+            // window.loadURL("./index.html");
+        }
     }
 
     //--\\ Else there is/are empty field(s)
