@@ -9,7 +9,7 @@ const url = require("url");
 let window;
 
 function createWindow(){
-    window = new BrowserWindow({title: "Admin Page"});
+    window = new BrowserWindow();
     window.loadURL(url.format({
         pathname: path.join(__dirname, "index.html"),
         protocol: "file",
