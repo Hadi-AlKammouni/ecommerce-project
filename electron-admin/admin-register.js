@@ -59,7 +59,33 @@ function register(){
             password_confirmation.style.borderBlockColor="red";
             // dialog.showMessageBox("password & password_confirmation must be identical & minimum six characters ");
         }
+        
+         // If all condition are correct
+         if (username_condition== true && email_condition == true && password_condition == true && password_confirmation_condition == true){
 
+            // Sending post request
+            let data = new FormData();
+            data.append('name', username.value);
+            data.append('email',  email.value);
+            data.append('password', password.value);
+            data.append('password_confirmation', password_confirmation.value);
+
+            axios.post("http://127.0.0.1:8000/api/register", data)
+            .then(function (response) {
+              console.log(response.data);
+            })
+            .catch(function (e) {
+              console.log(e);
+              }
+            )
+
+            // Emptying the fields after the request is done 
+            for (let i=0; i<inputs.length; i++){
+                inputs[i].value="";
+            }
+            alert("Item has been added successfully");
+            // window.loadURL("./index.html");
+          }
     }
 
     //--\\ Else there is/are empty field(s)
