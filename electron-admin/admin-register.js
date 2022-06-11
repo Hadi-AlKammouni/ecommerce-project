@@ -60,8 +60,8 @@ function register(){
             // dialog.showMessageBox("password & password_confirmation must be identical & minimum six characters ");
         }
         
-         // If all condition are correct
-         if (username_condition== true && email_condition == true && password_condition == true && password_confirmation_condition == true){
+        // If all condition are correct
+        if (username_condition== true && email_condition == true && password_condition == true && password_confirmation_condition == true){
 
             // Sending post request
             let data = new FormData();
@@ -85,7 +85,7 @@ function register(){
             }
             alert("Item has been added successfully");
             // window.loadURL("./index.html");
-          }
+        }
     }
 
     //--\\ Else there is/are empty field(s)
