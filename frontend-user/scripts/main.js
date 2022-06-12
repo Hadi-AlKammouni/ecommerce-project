@@ -23,7 +23,7 @@ function populate(res){
     // Appending clue to show categories page
     let option = document.createElement("option");
     option.setAttribute("id","show-categories-page");
-    option.innerHTML = "click search to show categories page";
+    option.innerHTML = "click category to show categories page";
     item_category.appendChild(option);
    
     // Adding the categories found in db to the select field
