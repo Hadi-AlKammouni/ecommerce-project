@@ -121,14 +121,14 @@ h3{
     margin: 2% 0%;
 }
 
-#signup-btn{
+#signup-page-btn{
     width: fit-content;
     background-color: rgb(241, 158, 186);
     margin: 2%;
     border-radius: 5px;
 }
 
-#signup-btn:hover{
+#signup-page-btn:hover{
     cursor: pointer;
     background-color: rgba(241, 158, 186, 0.814);
 }
