@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use App\Models\Item;
+use App\Models\Category;
 
 class UserController extends Controller
 {
@@ -13,7 +14,7 @@ class UserController extends Controller
         if($id != null){
             $items = Item::where('id','=',$id)->get();
         }else{
-        $items = Item::all();    
+            $items = Item::all();    
         }
 
         return response()->json([
@@ -23,13 +24,13 @@ class UserController extends Controller
     }
 
     // Function to get items by category
-    public function getItemByCategory($category){
-        $items = Item::where('item_category','=',$category)->get();
-        // if (!$items){
-        //     return response()->json([
-        //         "status" => "No items found with the category entered"
-        //     ], 200);
-        // }
+    public function getItemByCategory($category = null){
+        if($category != null){
+            $items = Category::where('item_category','=',$category)->get();
+        }else{
+            $items = Category::all();    
+        }
+
         return response()->json([
             "status" => "Success",
             "results" => $items
