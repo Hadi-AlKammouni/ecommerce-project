@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the main-admin-page */
+#main-body{
+    text-align: center;
+    /* margin: 25% 0%; */
+    margin-top: 10%;
+    background-color: #ffcc00;
+    
+}
+
+#header-title{
+    font-size: 46px;
+    margin-bottom: 25px;
+    padding-top: 20px;
+}
+
+#create-account-btn, #login-account-btn ,#add-item-btn{
+    background-color: white;
+    color: black;
+    width: 80%;
+    margin: 10px 0px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#create-account-btn:hover, #login-account-btn:hover, #add-item-btn:hover:hover{
+    cursor: pointer;  
+    background-color: black;
+    color: white;
+    border-color: white;
+}   
