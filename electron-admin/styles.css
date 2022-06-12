@@ -5,9 +5,8 @@
 }
 
 /* Styling the main-admin-page */
-#main-body{
+#main-body, #register-body, #login-body, #add-item-body{
     text-align: center;
-    /* margin: 25% 0%; */
     margin-top: 10%;
     background-color: #ffcc00;
     
@@ -19,7 +18,7 @@
     padding-top: 20px;
 }
 
-#create-account-btn, #login-account-btn ,#add-item-btn{
+#create-account-btn, #login-account-btn ,#main-add-item-btn{
     background-color: white;
     color: black;
     width: 80%;
@@ -29,9 +28,34 @@
     font-weight: bold;
 }
 
-#create-account-btn:hover, #login-account-btn:hover, #add-item-btn:hover:hover{
+#create-account-btn:hover, #login-account-btn:hover, #main-add-item-btn:hover:hover{
     cursor: pointer;  
     background-color: black;
     color: white;
     border-color: white;
 }   
+
+/* Styling the register/login/add-item-admin-pages */
+#register, #login-btn, #add-item-btn{
+    background-color: white;
+    color: black;
+    width: 25%;
+    margin: 10px 0px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#register:hover, #login-btn:hover, #add-item-btn:hover{
+    cursor: pointer;  
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+.register-input, .login-input, .add-item-info{
+    border-style: solid;
+    border-radius: 10px;
+    width: 50%;
+    height: 60px;
+}

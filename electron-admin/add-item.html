@@ -6,15 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Item</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body id="add-item-body">
 
     <div class="add-item-container">
+        <h1 id="header-title">Add Item</h1>
         <div class="add-item-row">
+            <div>
+                <h3>Enter Item's Name</h3>
                 <div><input class="add-item-info" id="item-name" type="text" placeholder="item name"/></div>
+            </div>
+            <div>
+                <h3>Enter Item's Description</h3>
                 <div><input class="add-item-info" id="item-description" type="text" placeholder="item description"/></div>
+            </div>    
+            <div>
+                <h3>Enter Item's Category</h3>
                 <div><input class="add-item-info" id="item_category" type="text" placeholder="item category"/></div>
+            </div>    
+                
                 <div><input id="add-item-btn" type="button" value="Add Item"/></div>
         </div>
     </div>
