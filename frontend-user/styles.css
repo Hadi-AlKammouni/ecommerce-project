@@ -1,0 +1,14 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#landing-header {
+    background-image: url(./assets/Background-1.jpg);
+    height: 130vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
