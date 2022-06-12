@@ -59,3 +59,22 @@
     width: 50%;
     height: 60px;
 }
+
+/* Styling return to main page button */
+#back-btn{
+    background-color: black;
+    color: white;
+    border-color: white;
+    width: 25%;
+    margin: 10px 0px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#back-btn:hover{
+    cursor: pointer;  
+    background-color: rgb(205, 202, 202);
+    color: black;
+    border-color: black; 
+}
