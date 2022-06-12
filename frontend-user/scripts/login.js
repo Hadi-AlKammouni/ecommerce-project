@@ -51,15 +51,19 @@ function logIn(){
             .then(function (response) {
                 if(response.status == 200){
                     let response1 = response.data;
-                    token = response1.access_token;
-                    id = response1.user_id;
+                    let token = response1.access_token;
+                    let id = response1.user_id;
+                    let name = response1.name;
                     localStorage.setItem('access_token', token);
                     localStorage.setItem('user_id', id);
+                    localStorage.setItem('name', name);
+                    alert("logged in successfully");
+                    window.location.href = "../index.html";
                 }
             })
             .catch(e=>{
                 if(e.response.status != 200){
-                    alert(e.response.data.error)
+                    alert(e.response.data.error);
                 }
             })
             
