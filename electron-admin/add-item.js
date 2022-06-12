@@ -21,9 +21,9 @@ function addItem(){
 
     // Send request POST
     axios.post("http://127.0.0.1:8000/api/v1/admin/add_item",data, {
-        Header:({
-            Authorization: "Bearer" + `${admin_token}`,
-            Accept: "application/json"})})
+        headers:{
+            Authorization: "Bearer " + admin_token,
+            Accept: "application/json"}})
     .then((response) => {
         console.log(response.data)
     })
