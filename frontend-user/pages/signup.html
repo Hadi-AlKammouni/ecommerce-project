@@ -5,27 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
-<body>
+<body id="signup-body">
 
     <!-- Sign up form -->
-    <section class="signup">
-        <div class="container">
-            <div>
-                <h2>Create New Account</h2>
-                <div><input type="text" id="name" placeholder="username"/></div>
-                <div><input type="email" id="email" placeholder="email"/></div>
-                <div><input type="password" id="password" placeholder="password"/></div>
-                <div><input type="password" id="confirm-password" placeholder="confirm-password"/></div>
-                <div><input type="button" id="signup" value="Create Account"/></div>
+    <h2 id="signup-header">Create New Account</h2>
+    <section class="signup-container">
+        
+            <div class="signup-info">
+                <h3>Username</h3>
+                <div><input type="text" class="input-info" id="name" placeholder="username"/></div>
+                <h3>Email</h3>
+                <div><input type="email" class="input-info" id="email" placeholder="email"/></div>
+                <h3>Password </h3>
+                <div><input type="password" class="input-info" id="password" placeholder="password"/></div>
+                <h3>Confirm Password </h3>
+                <div><input type="password" class="input-info" id="confirm-password" placeholder="confirm-password"/></div>
+                <div><input type="button" id="signup-btn" value="Create Account"/></div>
+                
             </div>
-            <div>
-                <img src="../assets/signup-image.jpg" >
+
+            <div class="signup-img">
+                <img id="signup-img" src="../assets/signup-image.jpg" >
+                <br/>
                 <a href="#">I am already member</a>
             </div>
-        </div>
+                
     </section>
-
-
+    
 </body>
 </html>
