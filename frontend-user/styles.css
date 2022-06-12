@@ -89,3 +89,54 @@
     border: 3px solid rgb(91, 91, 91);
     cursor: pointer;
 }
+
+/* Sign up page styling */
+#signup-body{
+    background-color: bisque;
+}
+
+#signup-header{
+    text-align-last: center;
+    margin-top: 2.5%;
+}
+
+.signup-container{
+    display: flex;
+    margin: 5% 15%;
+    text-align-last: center;
+    border: solid;
+}
+
+.signup-info, .signup-img{
+    flex-basis: 50%;
+}
+
+#signup-img{
+    width: 65%;
+    border-radius: 5px;
+    margin-top: 2%;
+}
+
+h3{
+    margin: 2% 0%;
+}
+
+#signup-btn{
+    width: fit-content;
+    background-color: rgb(241, 158, 186);
+    margin: 2%;
+    border-radius: 5px;
+}
+
+#signup-btn:hover{
+    cursor: pointer;
+    background-color: rgba(241, 158, 186, 0.814);
+}
+
+.input-info{
+    border-radius: 2px;
+}
+
+.input-info:hover{
+    border-color: rgb(241, 158, 186);
+}
