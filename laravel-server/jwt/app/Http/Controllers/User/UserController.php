@@ -26,7 +26,7 @@ class UserController extends Controller
     // Function to get items by category
     public function getItemByCategory($category = null){
         if($category != null){
-            $items = Category::where('item_category','=',$category)->get();
+            $items = Category::where('category_name','=',$category)->get();
         }else{
             $items = Category::all();    
         }

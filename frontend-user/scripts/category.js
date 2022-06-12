@@ -11,6 +11,5 @@ if(name_from_storage != null){
 }
 
 axios.get("http://127.0.0.1:8000/api/v1/user/category_search")
-  .then(res => { 
-    console.log(res.data)})
-  .catch(e=> console.log(e));
+.then(res => {console.log(res.data)})
+.catch(e=> console.log(e));

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing page</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
 
@@ -24,15 +25,10 @@
         
         <div class="header-search">
             <input type="text" placeholder="Find Item">
-            <select name="food-category" id="food-category">
-               <option value="">Select category</option>
-               <option value=""></option>
-               <option value=""></option>
-               <option value=""></option>
-               <option value=""></option>
-               <option value=""></option>
+            <select name="item-category" id="item-category">
+               <!-- To be added from the js -->
             </select>
-            <button>search</button>
+            <button id="search-btn">search</button>
         </div>
 
     </header>
