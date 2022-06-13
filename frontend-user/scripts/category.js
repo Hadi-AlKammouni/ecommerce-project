@@ -15,7 +15,7 @@ if(name_from_storage != null){
 let required_category = ""
 let listing_category_names = [];
 let listing_category_ids = [];
-let img = "img"
+let img = "img";
 let counter = 1;
 
 // Sending get request to get all categories in db
@@ -36,7 +36,7 @@ function display(res){
         listing_category_names.push(result[i].category_name);
         // Inserting the image
         let image = document.createElement("img");
-        image.id = img +counter;
+        image.id = img + counter;
         listing_category_ids.push(image.id);
         image.classList.add('item');
         image.src = result[i].images;

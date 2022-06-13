@@ -17,6 +17,10 @@ if(name_from_storage != null){
     }
 }
 
+// To add id for each item image
+let item = "item";
+let counter = 1;
+
 // Changing the subtitle into required category
 items_title.innerText = category_name  
 
@@ -37,8 +41,13 @@ function display(res){
         items.appendChild(item_name);
         // Inserting the image
         let image = document.createElement("img");
+        image.id = item + counter;
         image.classList.add('item');
         image.src = result[i].images;
         items.appendChild(image);
+        counter++;
     }
 }
+
+// Getting the token from the localstorage
+let admin_token = localStorage.getItem('access_token');

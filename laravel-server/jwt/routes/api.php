@@ -18,12 +18,13 @@ Route::group(['prefix' => 'v1'], function(){
     });
 
     Route::group(['prefix' => 'user'], function(){
-        // Route::group(['middleware' => 'role.user'], function(){
             Route::get('/all_items/{id?}', [UserController::class, 'getAllItems']);
             Route::get('/category_search/{category?}', [UserController::class, 'getCategory']);
             Route::get('/item_search/{category}', [UserController::class, 'getItemByCategory']);
-            Route::post('/add_favourite', [UserController::class, 'addFavourite']);
-        // });
+            
+            Route::group(['middleware' => 'role.user'], function(){
+                Route::post('/add_favourite', [UserController::class, 'addFavourite']);
+            });
     });
     
     // Function called when not an admin tried to reach the add_item page
