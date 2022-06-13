@@ -7,6 +7,7 @@ let search_btn = document.getElementById("search-btn");
 if(name_from_storage != null){
     document.getElementById("login-btn").innerHTML = "Welcome " + name_from_storage;
     document.getElementById("signup-btn").style.display = "none";
+    document.getElementById("logout-btn").style.display = "block";
     document.getElementById("login-btn").onclick = function(){  
         window.location.href = "#";
     }

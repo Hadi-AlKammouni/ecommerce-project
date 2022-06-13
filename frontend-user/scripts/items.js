@@ -3,7 +3,7 @@ let name_from_storage = localStorage.getItem("name");
 let items_title = document.getElementById("items-title");
 let items = document.getElementById("items-display");
 
-// Getting the token from the localstorage
+// Getting the token & user id from the localstorage
 let user_token = localStorage.getItem('access_token');
 let id = localStorage.getItem('user_id');
 
@@ -16,6 +16,7 @@ category_name = category_name.category_name;
 if(name_from_storage != null){
     document.getElementById("login-btn").innerHTML = "Welcome " + name_from_storage;
     document.getElementById("signup-btn").style.display = "none";
+    document.getElementById("logout-btn").style.display = "block";
     document.getElementById("login-btn").onclick = function(){  
         window.location.href = "#";
     }
@@ -53,7 +54,7 @@ function display(res){
         items.appendChild(image);
         item_html_id.push(image.id)
         counter++;
-        
+
         // Storing ids of items in item_db_ids list
         item_db_ids.push(result[i].item_id);
     }

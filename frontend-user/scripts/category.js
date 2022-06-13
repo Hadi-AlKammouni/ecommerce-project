@@ -2,13 +2,27 @@
 let name_from_storage = localStorage.getItem("name");
 let categories = document.getElementById("items-display");
 
+// Getting the token from the localstorage
+let user_token = localStorage.getItem('access_token');
+
 // Check if the user is logged in or no/ if yes, add greeting
 if(name_from_storage != null){
     document.getElementById("login-btn").innerHTML = "Welcome " + name_from_storage;
     document.getElementById("signup-btn").style.display = "none";
+    document.getElementById("logout-btn").style.display = "block";
     document.getElementById("login-btn").onclick = function(){  
         window.location.href = "#";
     }
+//     // Logout post request
+//     document.getElementById("logout-btn").onclick = function(){  
+//         // Send request POST
+//         axios.post("http://127.0.0.1:8000/api/logout",{
+//             headers:{
+//                 Authorization: "Bearer " + user_token,
+//                 Accept: "application/json"}})
+//                 .then(res => console.log(res))
+//                 .catch(e=> console.log(e));
+//     }
 }
 
 // Variables to get the category clicked
