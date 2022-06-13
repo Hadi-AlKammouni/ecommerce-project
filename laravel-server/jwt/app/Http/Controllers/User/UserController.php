@@ -24,7 +24,7 @@ class UserController extends Controller
     }
 
     // Function to get items by category
-    public function getItemByCategory($category = null){
+    public function getCategory($category = null){
         if($category != null){
             $items = Category::where('category_name','=',$category)->get();
         }else{
@@ -38,13 +38,9 @@ class UserController extends Controller
     }
 
     // Function to get items by name
-    public function getItemByName($name){
-        $items = Item::where('item_name','=',$name)->get();
-        // if (!$items){
-        //     return response()->json([
-        //         "status" => "No items found with the category entered"
-        //     ], 200);
-        // }
+    public function getItemByCategory($category){
+        $items = Item::where('item_category','=',$category)->get();
+      
         return response()->json([
             "status" => "Success",
             "results" => $items

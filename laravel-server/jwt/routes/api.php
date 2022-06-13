@@ -22,8 +22,8 @@ Route::group(['prefix' => 'v1'], function(){
         // Route::group(['middleware' => 'role.user'], function(){
             // Route::get('/hi', [UserController::class, 'hi']);
             Route::get('/all_items/{id?}', [UserController::class, 'getAllItems']);
-            Route::get('/category_search/{category?}', [UserController::class, 'getItemByCategory']);
-            Route::get('/name_search/{name}', [UserController::class, 'getItemByName']);
+            Route::get('/category_search/{category?}', [UserController::class, 'getCategory']);
+            Route::get('/item_search/{category}', [UserController::class, 'getItemByCategory']);
             // FAVOURITE!! Route::get('/search/{category}', [UserController::class, 'getItemByCategory']);
         // });
     });
