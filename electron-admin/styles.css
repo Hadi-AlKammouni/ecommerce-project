@@ -36,7 +36,7 @@
 }   
 
 /* Styling the register/login/add-item-admin-pages */
-#register, #login-btn, #add-item-btn{
+#register, #login-btn, #add-item-btn, #add-category-btn{
     background-color: white;
     color: black;
     width: 25%;
@@ -46,7 +46,7 @@
     font-weight: bold;
 }
 
-#register:hover, #login-btn:hover, #add-item-btn:hover{
+#register:hover, #login-btn:hover, #add-item-btn:hover, #add-category-btn:hover{
     cursor: pointer;  
     background-color: black;
     color: white;

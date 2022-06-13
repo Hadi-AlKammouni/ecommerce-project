@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Category</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="add-item-body">
+
+    <div class="add-item-container">
+        <h1 id="header-title">Add Category</h1>
+        <div class="add-item-row">
+            <div>
+                <h3>Enter Category's Description</h3>
+                <div><input class="add-item-info" id="item-name" type="text" placeholder="item name"/></div>
+            </div>   
+                
+            <div><input id="add-category-btn" type="button" value="Add Category"/></div>
+        </div>
+    </div>
+    <div><input id="back-btn" type="button" value="Go to Main Page" onclick="window.location.href='index.html';"/></div>
+
+    <script src="./add-item.js"></script>
+
+</body>
+</html>
