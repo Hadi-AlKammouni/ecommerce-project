@@ -9,6 +9,22 @@ let add_Item = document.getElementById("add-item-btn")
 // Getting the token from the localstorage
 let admin_token = localStorage.getItem('access_token');
 
+let base64String="";
+function imageUploaded() {
+	var file = document.querySelector('input[type=file]')['files'][0];
+
+	var reader = new FileReader();
+	
+	reader.onload = function () {
+       
+		base64String = reader.result;
+		var disp=document.getElementById('display');
+        disp.innerHTML='';
+		disp.innerHTML=`<img src="`+base64String+`">`
+	}
+	reader.readAsDataURL(file);
+}
+
 // Getting the pre-added categegories
 axios.get("http://127.0.0.1:8000/api/v1/user/category_search")
 .then(res => {showCategories(res)})
@@ -35,9 +51,10 @@ function addItem(){
     
     // Sending post request
     let data = new FormData();
-    data.append('item_name', item_name.value)
-    data.append('item_description', item_description.value)
-    data.append('item_category', item_category.value)
+    data.append('item_name', item_name.value);
+    data.append('item_description', item_description.value);
+    data.append('item_category', item_category.value);
+    data.append('images', base64String);
     // console.log(admin_token);
 
     // Send request POST

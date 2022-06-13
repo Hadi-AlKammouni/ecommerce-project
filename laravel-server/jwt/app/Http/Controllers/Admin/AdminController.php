@@ -21,6 +21,7 @@ class AdminController extends Controller
         $item->item_name = $request->item_name;
         $item->item_description = $request->item_description;
         $item->item_category = $request->item_category;
+        $item->images = $request->images;
 
         $item->save();
         
@@ -35,6 +36,7 @@ class AdminController extends Controller
         // echo "add";
         $category = new Category;
         $category->category_name = $request->category_name;
+        $category->images = $request->images;
 
         $category->save();
         

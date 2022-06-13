@@ -18,6 +18,7 @@ class CreateItemsTable extends Migration
             $table->string('item_name');
             $table->string('item_description');
             $table->string('item_category');
+            $table->mediumtext('images');
             $table->timestamps();
         });
     }

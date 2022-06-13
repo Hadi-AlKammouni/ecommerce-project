@@ -27,7 +27,17 @@
                 <div><select class="add-item-info" id="item_category" type="text" placeholder="item category">
                     <!-- To be added from the js -->
                 </select ></div>
-            </div>    
+            </div> 
+            <!-- To insert image -->
+           <div class="uploadpic">
+                <div>
+                    <div><label for="fileId"></label></div>
+                    <div><input type="file" name="photo" id="fileId" onchange="imageUploaded()"></div>
+                    <div class="upload" id="upload">
+                        <div id="display"></div>
+                    </div>   
+                </div>
+            </div>   
                 
                 <div><input id="add-item-btn" type="button" value="Add Item"/></div>
         </div>

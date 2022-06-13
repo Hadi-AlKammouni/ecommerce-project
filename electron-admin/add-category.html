@@ -18,7 +18,18 @@
                 <h3>Enter Category's Description</h3>
                 <div><input class="add-item-info" id="item-name" type="text" placeholder="item name"/></div>
             </div>   
-                
+            
+            <!-- To insert image -->
+           <div class="uploadpic">
+                <div>
+                    <div><label for="fileId"></label></div>
+                    <div><input type="file" name="photo" id="fileId" onchange="imageUploaded()"></div>
+                    <div class="upload" id="upload">
+                        <div id="display"></div>
+                    </div>   
+                </div>
+            </div>     
+
             <div><input id="add-category-btn" type="button" value="Add Category"/></div>
         </div>
     </div>
