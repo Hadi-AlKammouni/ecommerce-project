@@ -22,7 +22,7 @@ Route::group(['prefix' => 'v1'], function(){
             Route::get('/all_items/{id?}', [UserController::class, 'getAllItems']);
             Route::get('/category_search/{category?}', [UserController::class, 'getCategory']);
             Route::get('/item_search/{category}', [UserController::class, 'getItemByCategory']);
-            // FAVOURITE!! Route::get('/search/{category}', [UserController::class, 'getItemByCategory']);
+            Route::post('/add_favourite', [UserController::class, 'addFavourite']);
         // });
     });
     

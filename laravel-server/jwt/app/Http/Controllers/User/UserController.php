@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Item;
 use App\Models\Category;
+use App\Models\Favourite;
 
 class UserController extends Controller
 {
@@ -46,4 +47,19 @@ class UserController extends Controller
             "results" => $items
         ], 200);
     }
+
+    // Function to favourite items
+    public function addFavourite(Request $request){
+
+        $favourite = new Favourite;
+        $favourite->id = $request->id;
+        $favourite->item_id = $request->item_id;
+
+        $favourite->save();
+        
+        return response()->json([
+            "status" => "Success"
+        ], 200);
+
+    } 
 }
