@@ -12,7 +12,6 @@ Route::group(['prefix' => 'v1'], function(){
 
     Route::group(['prefix' => 'admin'], function(){
         Route::group(['middleware' => 'role.admin'], function(){
-            // Route::get('/hi', [AdminController::class, 'hi']);
             Route::post('/add_item', [AdminController::class, 'addItem']);
             Route::post('/add_category', [AdminController::class, 'addCategory']);
         });
@@ -20,7 +19,6 @@ Route::group(['prefix' => 'v1'], function(){
 
     Route::group(['prefix' => 'user'], function(){
         // Route::group(['middleware' => 'role.user'], function(){
-            // Route::get('/hi', [UserController::class, 'hi']);
             Route::get('/all_items/{id?}', [UserController::class, 'getAllItems']);
             Route::get('/category_search/{category?}', [UserController::class, 'getCategory']);
             Route::get('/item_search/{category}', [UserController::class, 'getItemByCategory']);
