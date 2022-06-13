@@ -18,7 +18,7 @@
     padding-top: 20px;
 }
 
-#create-account-btn, #login-account-btn ,#main-add-item-btn{
+#create-account-btn, #login-account-btn ,#main-add-item-btn, #main-add-category-btn{
     background-color: white;
     color: black;
     width: 80%;
@@ -28,7 +28,7 @@
     font-weight: bold;
 }
 
-#create-account-btn:hover, #login-account-btn:hover, #main-add-item-btn:hover:hover{
+#create-account-btn:hover, #login-account-btn:hover, #main-add-item-btn:hover, #main-add-category-btn:hover{
     cursor: pointer;  
     background-color: black;
     color: white;
